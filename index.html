@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thomas – Graphiste freelance</title>
+  <meta name="description" content="Portfolio de Thomas, graphiste freelance : identité visuelle, UI et illustration.">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+
+  <!-- Police Heebo (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+  <!-- Menu fixe avec ancres -->
+  <header class="header">
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#accueil" class="logo">BeThom</a>
+      <ul class="nav__list">
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#articles">Blog</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ACCUEIL -->
+    <section id="accueil" class="hero">
+      <div class="hero__text">
+        <h1>Hi, Je suis Thomas, Graphiste</h1>
+        <p>Passionné par le code et le design, j’aide les entreprises et les créateurs à développer des sites modernes, performants et adaptés à leurs besoins. Mon objectif est de transformer vos idées en expériences numériques fluides et efficaces.</p>
+        <a href="assets/cv/cv-thomas.pdf" class="btn" download>Télécharger mon CV</a>
+      </div>
+      <img src="assets/img/thomas.png" alt="Portrait de Thomas, graphiste freelance" class="hero__photo" width="200" height="200">
+    </section>
+
+    <!-- ARTICLES RÉCENTS -->
+    <section id="articles" class="articles">
+      <div class="articles__header">
+        <h2>Articles récents</h2>
+        <a href="#articles">View all</a>
+      </div>
+      <div class="articles__grid">
+        <article class="card">
+          <h3>Créer un design system à partir de zéro</h3>
+          <p class="card__meta">Date | Tags</p>
+          <p>Dans cet article, je partage mon approche pour mettre en place un design system clair et efficace, afin de garantir la cohérence visuelle d’un projet digital.</p>
+        </article>
+        <article class="card">
+          <h3>Créer des icônes pixel perfect dans Figma</h3>
+          <p class="card__meta">Date | Tags</p>
+          <p>Découvrez mes techniques pour concevoir des icônes nettes et précises dans Figma, adaptées aussi bien au web qu’aux applications mobiles.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="portfolio">
+      <h2>Travaux en vedette</h2>
+
+      <article class="project">
+        <img src="assets/img/projet-dashboard.png" alt="Aperçu d'un tableau de bord sombre avec graphiques" width="200" height="140">
+        <div class="project__body">
+          <h3>Design de tableaux de bord</h3>
+          <p class="project__tags"><span class="pill">2018</span> <span>Catégorie</span></p>
+          <p>Un projet de conception d’interface utilisateur pour une plateforme de gestion. L’objectif était de proposer un tableau de bord intuitif et esthétique.</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <img src="assets/img/projet-portraits.png" alt="Illustration colorée d'un portrait de femme aux cheveux violets" width="200" height="140">
+        <div class="project__body">
+          <h3>Portraits vibrants de 2020</h3>
+          <p class="project__tags"><span class="pill">2018</span> <span>Illustration</span></p>
+          <p>Série d'illustrations numériques réalisées avec une palette de couleurs audacieuses, explorant l'émotion à travers le portrait.</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <img src="assets/img/projet-typo.png" alt="Lettrine ornementale sur fond sombre, projet de typographie" width="200" height="140">
+        <div class="project__body">
+          <h3>36 jours de typographie</h3>
+          <p class="project__tags"><span class="pill">2018</span> <span>Typographie</span></p>
+          <p>Un projet créatif consistant à explorer et styliser les caractères de la typographie malayalam à travers une série de visuels graphiques.</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+      <h2>Me contacter</h2>
+      <div class="contact__grid">
+        <div class="contact__info">
+          <h3>Parlons-en</h3>
+          <p>Vous avez une grande idée ou un projet à développer et besoin d'aide ? Contactez-moi, je serai ravi d'échanger avec vous et de vous accompagner.</p>
+          <h3>Email</h3>
+          <p><a href="mailto:contact@exemple.fr">contact@exemple.fr</a></p>
+          <h3>Socials</h3>
+          <p>beebs@gmail.com</p>
+        </div>
+
+        <form class="form" action="#" method="post">
+          <label for="nom">Nom</label>
+          <input type="text" id="nom" name="nom" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="service">Quel service vous intéresse</label>
+          <select id="service" name="service">
+            <option value="">Select project type</option>
+            <option>Identité visuelle</option>
+            <option>UI design</option>
+            <option>Illustration</option>
+          </select>
+
+          <label for="budget">Budget</label>
+          <select id="budget" name="budget">
+            <option value="">Select project budget</option>
+            <option>Moins de 1 000 €</option>
+            <option>1 000 € – 5 000 €</option>
+            <option>Plus de 5 000 €</option>
+          </select>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+
+          <button type="submit" class="btn btn--dark">Envoyer</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <ul class="footer__social">
+      <li><a href="#">Facebook</a></li>
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">Twitter</a></li>
+      <li><a href="#">LinkedIn</a></li>
+    </ul>
+    <p>Copyright © 2024 Tous droits réservés.</p>
+  </footer>
+
+</body>
+</html>
